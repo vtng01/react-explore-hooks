@@ -16,6 +16,9 @@ function ProductView({ products }) {
             <ProductListItem
               key={item.id}
               product={item}
+              isSelected={
+                selectedProduct && selectedProduct.id == item.id ? true : false
+              }
               onClick={() => {
                 console.log("SELECT PRODUCT", item);
                 setSelectedProduct(item);
